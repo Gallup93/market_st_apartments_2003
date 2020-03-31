@@ -29,6 +29,7 @@ class BuildingTest < Minitest::Test
     building.add_unit(unit2)
     assert_equal [], building.renters
 
+    #I can't figure out how to make the apartment class update the building class @renters variable
     renter1 = Renter.new("Aurora")
     unit1.add_renter(renter1)
     assert_equal ["Aurora"], building.renters
@@ -36,9 +37,6 @@ class BuildingTest < Minitest::Test
     renter2 = Renter.new("Tim")
     unit2.add_renter(renter2)
     assert_equal ["Aurora", "Tim"], building.renters
-
-
-
   end
 
 end

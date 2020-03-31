@@ -8,5 +8,8 @@ class Building
 
   def add_unit(unit)
     @units << unit
+    if unit.name != nil
+      @renters << unit.name
+    end
   end
 end
