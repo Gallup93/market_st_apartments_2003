@@ -3,13 +3,18 @@ class Building
 
   def initialize
     @units = []
-    @renters = []
+    # @renters = []
   end
 
   def add_unit(unit)
     @units << unit
-    if unit.name != nil
-      @renters << unit.name
+  end
+
+  def renters(renter)
+    @units.map do |unit|
+      require "pry"; binding.pry
+      unit.renter.name
     end
   end
+
 end
