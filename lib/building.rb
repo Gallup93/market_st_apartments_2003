@@ -12,7 +12,6 @@ class Building
 
   def renters(renter)
     @units.map do |unit|
-      require "pry"; binding.pry
       unit.renter.name
     end
   end
